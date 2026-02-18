@@ -50,11 +50,11 @@ The analysis is based on a relational database containing marketing events, user
 
 ### Database Schema
 
-(добавишь картинку схемы)
-
 ![Database Schema](docs/database_schema.png)
 
 ### Data Preparation (SQL Layer)
+
+![SQL Request](sql/email_metrics_query.sql)
 
 The reporting dataset was created using a SQL aggregation query that:
 
@@ -80,9 +80,9 @@ The reporting dataset was created using a SQL aggregation query that:
 
 ##### Example of metric calculation:
 
-count(distinct s.id_message) as sent_cnt,
-count(distinct o.id_message) as open_cnt,
-count(distinct v.id_message) as click_cnt
+count(distinct s.id_message) as sent_cnt,  
+  count(distinct o.id_message) as open_cnt,  
+  count(distinct v.id_message) as click_cnt
 
 
 ##### Final aggregation:
@@ -100,6 +100,8 @@ group by date, country
 - Are there noticeable engagement trends?
 
 ### Dashboard Features
+
+![Dashboard Preview](screenshots/dashboard_preview.png)
 
 The Tableau dashboard includes:
 
@@ -123,23 +125,21 @@ This allows measurement of engagement drop-off between stages.
 
 ### Key Insights
 
-(вставишь реальные выводы из дашборда)
+Average Open Rate: 35.50%
 
-Пример структуры:
+Average Click Rate: 3.87%
 
-Average Open Rate: XX%
+Top performing country: United States
 
-Average Click Rate: XX%
-
-Top performing country: ___
-
-Engagement peaks on ___
+Engagement peaks on November 2020 at the beginning of observing
 
 Some markets show high send volume but low CTR
 
 ### Interactive Dashboard
 
-View on Tableau Public
+![Link for Dashboard Download](dashboard/email_dashboard.twbx)  
+
+[Open Dashboard on Tableau Public](https://public.tableau.com/views/Email_17419564598680/EmailMetrics?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 ### Tools & Technologies
 
@@ -154,14 +154,21 @@ View on Tableau Public
 - KPI & funnel analysis
 
 ### Repository Structure
-email-marketing-analytics-dashboard/
-│
-├── README.md
-├── sql/
-│   └── email_metrics_query.sql
-├── docs/
-│   └── database_schema.png
-├── dashboard/
-│   └── email_dashboard.twbx
-└── screenshots/
-    └── dashboard_preview.png
+
+email-marketing-analytics-dashboard/  
+
+  README.md  
+  
+  sql/  
+    email_metrics_query.sql  
+    
+  docs/  
+    database_schema.png  
+    
+  dashboard/  
+    email_dashboard.twbx  
+    
+  screenshots/  
+    dashboard_preview.png  
+
+
