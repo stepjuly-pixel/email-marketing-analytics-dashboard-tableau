@@ -154,7 +154,7 @@ Some markets show high send volume but low CTR
 - KPI & funnel analysis
 
 ### Repository Structure
-
+```
 email-marketing-analytics-dashboard-tableau/  
 
   README.md  
@@ -170,5 +170,4 @@ email-marketing-analytics-dashboard-tableau/
     
   screenshots/  
     dashboard_preview.png  
-
-
+```
