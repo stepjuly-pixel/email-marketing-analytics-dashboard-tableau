@@ -18,35 +18,35 @@ The analysis is based on a relational database containing marketing events, user
 
 ##### Email Events
 
-- email_sent
+- `email_sent`
 
-- email_open
+- `email_open`
 
-- email_visit
+- `email_visit`
 
 ##### User & Session Data
 
-- account
+- `account`
 
-- account_session
+- `account_session`
 
-- session
+- `session`
 
-- session_params
+- `session_params`
 
 ##### Additional Tables
 
-- order
+- `order`
 
-- product
+- `product`
 
-- ab_test
+- `ab_test`
 
-- event_params
+- `event_params`
 
-- paid_search_cost
+- `paid_search_cost`
 
-- revenue_predict
+- `revenue_predict`
 
 ### Database Schema
 
@@ -70,24 +70,24 @@ The reporting dataset was created using a SQL aggregation query that:
 
 #### Key Aggregated Metrics:
 
-- sent_cnt — number of emails sent
+- `sent_cnt` — number of emails sent
 
-- open_cnt — number of emails opened
+- `open_cnt` — number of emails opened
 
-- click_cnt — number of email clicks
+- `click_cnt` — number of email clicks
 
-- account_cnt — number of active accounts
+- `account_cnt` — number of active accounts
 
 ##### Example of metric calculation:
 
-count(distinct s.id_message) as sent_cnt,  
-  count(distinct o.id_message) as open_cnt,  
-  count(distinct v.id_message) as click_cnt
+`count(distinct s.id_message) as sent_cnt`,  
+  `count(distinct o.id_message) as open_cnt`,  
+  `count(distinct v.id_message) as click_cnt`
 
 
 ##### Final aggregation:
 
-group by date, country
+`group by date, country`
 
 ### Business Questions
 
