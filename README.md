@@ -155,7 +155,7 @@ Some markets show high send volume but low CTR
 
 ### Repository Structure
 
-email-marketing-analytics-dashboard/  
+email-marketing-analytics-dashboard-tableau/  
 
   README.md  
   
