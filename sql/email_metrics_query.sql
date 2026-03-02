@@ -38,7 +38,7 @@ SELECT
         country,
         sum(sent_cnt) as sent_cnt, 
         sum(open_cnt) as open_cnt,
-        sum(click_cnt) as clicn_cnt,
-        sum(account_cnt) as account_cnt,
+        sum(click_cnt) as click_cnt,
+        sum(account_cnt) as account_cnt
 from union_data
 group by date, country
